@@ -12,7 +12,7 @@ beforeAll(async () => {
 
 afterAll(async () => {
   await db.collection('users').deleteMany({ username: /^unittest_/ });
-  await client.close(); // ปิด connection db หลังจบทุกเทสต์
+  await client.close(); 
 });
 
 
