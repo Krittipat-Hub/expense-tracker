@@ -1,4 +1,4 @@
-require('dotenv').config(); // <<--- เพิ่มตรงนี้
+require('dotenv').config(); 
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -122,7 +122,7 @@ app.post('/expense', authenticateToken, [
   const { type, amount, description, date } = req.body;
   try {
     const result = await db.collection('expenses').insertOne({
-      user_id: new ObjectId(req.user.user_id), // ใช้ user_id จาก token
+      user_id: new ObjectId(req.user.user_id), 
       type,
       amount,
       description,
